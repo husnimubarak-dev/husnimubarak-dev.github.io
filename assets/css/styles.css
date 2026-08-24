@@ -79,6 +79,17 @@ body.light-theme {
   color: #fff !important;
 }
 
+.light-theme .success-button {
+  border-color: rgba(0, 198, 73, 0.772);
+  background: rgba(0, 198, 73, 0.772);
+  color: #fff !important;
+  box-shadow: 0 12px 30px rgba(194,107,63,.18);
+}
+.light-theme .success-button:hover {
+  background: darken(10%, rgba(0, 198, 73, 0.772));
+  color: #fff !important;
+}
+
 .light-theme .tag {
   border-color: rgba(23,32,51,.09);
   background: rgba(255,255,255,.62);
