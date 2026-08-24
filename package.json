@@ -1,0 +1,14 @@
+{
+  "name": "husni-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "build": "npm run build:css && npm run copy",
+    "build:css": "tailwindcss -i ./src/assets/css/input.css -o ./dist/assets/css/styles.css --minify",
+    "copy": "node ./scripts/copy-static.mjs",
+    "dev": "tailwindcss -i ./src/assets/css/input.css -o ./src/assets/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.0"
+  }
+}
