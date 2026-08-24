@@ -1,37 +1,33 @@
 # Husni Mubarak — Portfolio
 
-A production-ready static portfolio built with HTML and Tailwind CSS, deployed through GitHub Pages.
+Static portfolio for GitHub Pages.
 
 ## Stack
 
 - HTML
-- Tailwind CSS v4
+- Tailwind CSS via CDN
 - Vanilla JavaScript
-- GitHub Actions
 - GitHub Pages
-
-## Local development
-
-```bash
-npm install
-npm run build
-```
-
-For CSS watch mode:
-
-```bash
-npm run dev
-```
-
-Then open the generated `dist/index.html` with a local static server.
 
 ## Deployment
 
-Push to `main`. GitHub Actions builds the site and deploys the `dist/` directory to GitHub Pages.
+This version intentionally has **no npm/build step**.
+
+GitHub Actions uploads the repository root directly. The deployed artifact contains:
+
+```text
+index.html
+assets/
+```
+
+with `index.html` at the artifact root.
+
+## Update
+
+Edit `index.html`, commit, and push to `main`. GitHub Actions automatically deploys the update.
 
 ## Before publishing
 
-1. Replace `YOUR-USERNAME` in `src/index.html` with the GitHub Pages URL.
-2. Add your CV at `src/assets/documents/Husni-Mubarak-CV.pdf`.
-3. Optionally add a profile photo and update the hero card.
-4. Update the LinkedIn URL if needed.
+- Replace the photo placeholder with your profile photo if desired.
+- Add `assets/documents/Husni-Mubarak-CV.pdf` if you want a CV download button.
+- Review project descriptions and add concrete, non-confidential details.
