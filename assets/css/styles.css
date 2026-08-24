@@ -114,3 +114,31 @@ body.light-theme {
 @media (max-width: 640px) {
   .light-theme h1 { letter-spacing: -.045em; }
 }
+
+.project-label {
+  display: inline-flex;
+  border-radius: 9999px;
+  border: 1px solid rgba(194,107,63,.16);
+  background: rgba(194,107,63,.07);
+  padding: .3rem .7rem;
+  font-size: .68rem;
+  line-height: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: #a95630;
+}
+.project-index {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: .8rem;
+  border: 1px solid rgba(23,32,51,.08);
+  background: rgba(255,255,255,.55);
+  font-size: .7rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
