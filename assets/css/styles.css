@@ -1,14 +1,116 @@
-/* Portfolio-specific styles */
-.glass-card{border-radius:1.5rem;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.045);box-shadow:0 25px 50px -12px rgba(0,0,0,.2);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);transition:transform .3s ease,border-color .3s ease,background .3s ease}
-.glass-card:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.15);background:rgba(255,255,255,.065)}
-.glass-button{border-radius:1rem;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.045);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);transition:.3s ease}
-.glass-button:hover{border-color:rgba(255,255,255,.2);background:rgba(255,255,255,.09)}
-.primary-button{border-radius:1rem;border:1px solid rgba(165,243,252,.2);background:rgba(103,232,249,.9);color:#020617;box-shadow:0 10px 30px rgba(8,47,73,.3);transition:.3s ease}
-.primary-button:hover{transform:translateY(-2px);background:#a5f3fc}
-.section-kicker{font-size:.75rem;line-height:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.22em;color:#a5f3fc}
-.section-title{margin-top:.75rem;font-size:1.875rem;line-height:2.25rem;font-weight:600;letter-spacing:-.03em;color:#fff}
-.tag{border-radius:9999px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.045);padding:.25rem .75rem;font-size:.75rem;line-height:1rem;color:#cbd5e1}
-.project-card{position:relative;overflow:hidden;border-radius:1.5rem;border:1px solid rgba(255,255,255,.1);background:linear-gradient(135deg,rgba(255,255,255,.07),rgba(255,255,255,.025));padding:1.75rem;box-shadow:0 25px 50px -12px rgba(0,0,0,.2);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);transition:.3s ease}
-.project-card:hover{transform:translateY(-4px);border-color:rgba(165,243,252,.2)}
-.project-number{position:absolute;right:1.5rem;top:1.5rem;font-size:.75rem;line-height:1rem;font-weight:500;color:#64748b}
-.text-gradient{background:linear-gradient(110deg,#67e8f9 0%,#a78bfa 55%,#e879f9 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* Light editorial theme — intentionally avoids the typical developer dark aesthetic. */
+:root {
+  --paper: #faf9f6;
+  --paper-2: #f4f1eb;
+  --ink: #172033;
+  --muted: #64748b;
+  --line: rgba(23, 32, 51, .10);
+  --accent: #c26b3f;
+  --accent-soft: #f3d8c8;
+  --accent-2: #7c8f6a;
+}
+
+html { background: var(--paper); }
+body.light-theme {
+  background:
+    radial-gradient(circle at 12% 8%, rgba(194,107,63,.09), transparent 28rem),
+    radial-gradient(circle at 90% 20%, rgba(124,143,106,.10), transparent 30rem),
+    var(--paper) !important;
+  color: var(--ink) !important;
+}
+
+.light-theme .bg-slate-950,
+.light-theme .bg-slate-950\/70 { background-color: rgba(250,249,246,.84) !important; }
+.light-theme .text-white { color: var(--ink) !important; }
+.light-theme .text-slate-100 { color: #334155 !important; }
+.light-theme .text-slate-300 { color: #475569 !important; }
+.light-theme .text-slate-400 { color: #64748b !important; }
+.light-theme .text-slate-500 { color: #94a3b8 !important; }
+.light-theme .text-slate-600 { color: #64748b !important; }
+
+.light-theme .border-white\/10 { border-color: var(--line) !important; }
+.light-theme .border-white\/15 { border-color: rgba(23,32,51,.15) !important; }
+
+.light-theme .bg-white\/\[\.015\] { background: rgba(23,32,51,.018) !important; }
+.light-theme .bg-white\/\[\.03\] { background: rgba(255,255,255,.58) !important; }
+.light-theme .bg-white\/\[\.045\] { background: rgba(255,255,255,.58) !important; }
+.light-theme .bg-white\/10 { background: rgba(255,255,255,.72) !important; }
+.light-theme .border-cyan-300\/20 { border-color: rgba(194,107,63,.22) !important; }
+.light-theme .bg-cyan-300\/5 { background: rgba(194,107,63,.07) !important; }
+.light-theme .text-cyan-200,
+.light-theme .text-cyan-300 { color: var(--accent) !important; }
+.light-theme .bg-cyan-300\/90 { background: var(--accent) !important; }
+.light-theme .hover\:bg-cyan-200:hover { background: #a95630 !important; color: white !important; }
+.light-theme .bg-cyan-400\/10 { background: rgba(194,107,63,.08) !important; }
+.light-theme .bg-violet-500\/10 { background: rgba(124,143,106,.09) !important; }
+.light-theme .bg-sky-500\/10 { background: rgba(194,107,63,.055) !important; }
+.light-theme .from-cyan-300\/10 { --tw-gradient-from: rgba(194,107,63,.10) var(--tw-gradient-from-position), transparent var(--tw-gradient-to-position) !important; }
+.light-theme .to-violet-400\/10 { --tw-gradient-to: rgba(124,143,106,.10) var(--tw-gradient-to-position) !important; }
+
+.light-theme .glass-card {
+  border-color: rgba(23,32,51,.10);
+  background: rgba(255,255,255,.64);
+  box-shadow: 0 18px 45px rgba(60,48,35,.08);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+}
+.light-theme .glass-card:hover {
+  border-color: rgba(194,107,63,.22);
+  background: rgba(255,255,255,.78);
+}
+.light-theme .glass-button {
+  border-color: rgba(23,32,51,.10);
+  background: rgba(255,255,255,.62);
+  color: var(--ink) !important;
+}
+.light-theme .glass-button:hover {
+  border-color: rgba(194,107,63,.22);
+  background: rgba(255,255,255,.82);
+}
+.light-theme .primary-button {
+  border-color: rgba(194,107,63,.18);
+  background: var(--accent);
+  color: #fff !important;
+  box-shadow: 0 12px 30px rgba(194,107,63,.18);
+}
+.light-theme .primary-button:hover {
+  background: #a95630;
+  color: #fff !important;
+}
+
+.light-theme .tag {
+  border-color: rgba(23,32,51,.09);
+  background: rgba(255,255,255,.62);
+  color: #475569;
+}
+.light-theme .project-card {
+  border-color: rgba(23,32,51,.09);
+  background: linear-gradient(135deg, rgba(255,255,255,.88), rgba(244,241,235,.78));
+  box-shadow: 0 18px 45px rgba(60,48,35,.07);
+}
+.light-theme .project-card:hover {
+  border-color: rgba(194,107,63,.24);
+  box-shadow: 0 22px 55px rgba(60,48,35,.10);
+}
+
+.light-theme .section-kicker { color: var(--accent); }
+.light-theme .section-title { color: var(--ink); }
+
+.light-theme .text-gradient {
+  background: linear-gradient(110deg, #b85e38 0%, #8b6b58 52%, #71825f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+}
+
+.light-theme .shadow-\[0_0_12px_rgba\(103\,232\,249\,\.8\)\] {
+  box-shadow: 0 0 12px rgba(194,107,63,.45) !important;
+}
+
+.light-theme a { text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.light-theme header a { text-decoration: none; }
+
+@media (max-width: 640px) {
+  .light-theme h1 { letter-spacing: -.045em; }
+}
